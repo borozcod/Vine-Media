@@ -23,3 +23,22 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Vine Media. If not, see https://www.gnu.org/licenses/gpl.html.
 */
+
+/*
+* Register Post Type
+*/
+require_once plugin_dir_path(__FILE__) . 'includes/posttypes.php';
+register_activation_hook(__FILE__, 'series_rewrite');
+
+/*
+* Register Series Admin Role
+*/
+require_once plugin_dir_path(__FILE__) . 'includes/roles.php';
+register_activation_hook(__FILE__, 'register_series_role');
+register_deactivation_hook(__FILE__, 'remove_series_role');
+
+
+/*
+* Add role capabilities
+*/
+register_activation_hook(__FILE__, 'series_add_capabilities');
