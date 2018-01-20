@@ -42,3 +42,9 @@ register_deactivation_hook(__FILE__, 'remove_series_role');
 * Add role capabilities
 */
 register_activation_hook(__FILE__, 'series_add_capabilities');
+register_deactivation_hook(__FILE__, 'series_remove_capabilities');
+
+/*
+* Add CMB2 fields
+*/
+require_once plugin_dir_path(__FILE__) . 'includes/cmb2-functions.php';

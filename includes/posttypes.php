@@ -25,7 +25,7 @@ function serie_init() {
 
 	$args = array(
 		'labels'             => $labels,
-                'description'        => __( 'Description.', 'vine_media' ),
+        'description'        => __( 'Description.', 'vine_media' ),
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
@@ -35,10 +35,10 @@ function serie_init() {
 		'capability_type'    => 'serie',
 		'has_archive'        => true,
         'show_in_rest'       => true,
-        'rest_base'          => 'vine_media',
+        'rest_base'          => 'serie',
         'menu_icon'          => 'dashicons-video-alt',
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+		'supports'           => array( 'title', 'thumbnail' ),
         'map_meta_cap'       => true
 	);
 
