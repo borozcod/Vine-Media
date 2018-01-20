@@ -261,22 +261,29 @@ function vine_media_register_rest_api_box() {
 		'type'             => 'select',
 		'show_option_none' => true,
 		'options'          => array(
-			'standard' => esc_html__( 'Speaker 1', 'vine_media' ),
-			'custom'   => esc_html__( 'Speaker 2', 'vine_media' ),
-			'none'     => esc_html__( 'Speaker 3', 'vine_media' ),
+			'Speaker 1' => esc_html__( 'Speaker 1', 'vine_media' ),
+			'Speaker 2'   => esc_html__( 'Speaker 2', 'vine_media' ),
+			'Speaker 3'     => esc_html__( 'Speaker 3', 'vine_media' ),
 		),
 	) );
 
 	$cmb_rest->add_group_field(  $group_field_id, array(
 		'name'             => esc_html__( 'Select Location', 'vine_media' ),
-		'desc'             => esc_html__( 'field description (optional)', 'vine_media' ),
+		'desc'             => esc_html__( 'Select the speaker for this sermon', 'vine_media' ),
 		'id'               => 'sermon_location',
 		'type'             => 'select',
 		'show_option_none' => true,
 		'options'          => array(
-			'standard' => esc_html__( 'Speaker 1', 'vine_media' ),
-			'custom'   => esc_html__( 'Speaker 2', 'vine_media' ),
-			'none'     => esc_html__( 'Speaker 3', 'vine_media' ),
+			'Location 1' => esc_html__( 'Location 1', 'vine_media' ),
+			'Location 2'   => esc_html__( 'Location 2', 'vine_media' ),
+			'Location 3'     => esc_html__( 'Location 3', 'vine_media' ),
 		),
+	) );
+
+	$cmb_rest->add_group_field( $group_field_id, array(
+		'name'    => esc_html__( 'Sermon Description', 'vine_media' ),
+		'id'      => 'sermon_description',
+		'type'    => 'wysiwyg',
+		'options' => array(),
 	) );
 }
