@@ -241,7 +241,7 @@ function vine_media_register_rest_api_box() {
 	) );
 
 	$cmb_rest->add_group_field( $group_field_id, array(
-		'name'       => esc_html__( 'Sermon Video', 'vine_media' ),
+		'name'       => esc_html__( 'Sermon Video URL', 'vine_media' ),
 		'id'         => 'sermon_video_link',
 		'type'       => 'text',
 		'show_in_rest' => WP_REST_Server::EDITABLE,// WP_REST_Server::ALLMETHODS|WP_REST_Server::READABLE, // Determines which HTTP methods the field is visible in. Will override the cmb2_box 'show_in_rest' param.
