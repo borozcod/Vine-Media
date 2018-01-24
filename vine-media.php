@@ -48,3 +48,8 @@ register_deactivation_hook(__FILE__, 'series_remove_capabilities');
 * Add CMB2 fields
 */
 require_once plugin_dir_path(__FILE__) . 'includes/cmb2-functions.php';
+
+/*
+* Add Rewrite Rules
+*/
+require_once plugin_dir_path(__FILE__) . 'includes/rewrite.php';

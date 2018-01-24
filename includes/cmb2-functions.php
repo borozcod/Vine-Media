@@ -212,7 +212,7 @@ function vine_media_register_rest_api_box() {
 	$cmb_rest = new_cmb2_box( array(
 		'id'            => 'sermons_metabox',
 		'title'         => esc_html__( 'Sermons', 'vine_media' ),
-		'object_types'  => array( 'serie' ), // Post type
+		'object_types'  => array( 'series' ), // Post type
 		'show_in_rest' => WP_REST_Server::ALLMETHODS, // WP_REST_Server::READABLE|WP_REST_Server::EDITABLE, // Determines which HTTP methods the box is visible in.
 		// Optional callback to limit box visibility.
 		// See: https://github.com/CMB2/CMB2/wiki/REST-API#permissions
@@ -224,7 +224,7 @@ function vine_media_register_rest_api_box() {
 		'type'        => 'group',
 		'description' => esc_html__( 'Add sermons for this series', 'vine_media' ),
 		'options'     => array(
-			'group_title'   => esc_html__( 'Entry {#}', 'vine_media' ), // {#} gets replaced by row number
+			'group_title'   => esc_html__( 'Sermon {#}', 'vine_media' ), // {#} gets replaced by row number
 			'add_button'    => esc_html__( 'Add Another Sermon', 'vine_media' ),
 			'remove_button' => esc_html__( 'Remove Sermon', 'vine_media' ),
 			'sortable'      => true,

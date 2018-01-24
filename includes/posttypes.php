@@ -8,14 +8,14 @@ add_action( 'init', 'serie_init' );
 function serie_init() {
 	$labels = array(
 		'name'               => _x( 'Series', 'post type general name', 'vine_media' ),
-		'singular_name'      => _x( 'Serie', 'post type singular name', 'vine_media' ),
+		'singular_name'      => _x( 'Series', 'post type singular name', 'vine_media' ),
 		'menu_name'          => _x( 'Series', 'admin menu', 'vine_media' ),
-		'name_admin_bar'     => _x( 'Serie', 'add new on admin bar', 'vine_media' ),
-		'add_new'            => _x( 'Add New', 'serie', 'vine_media' ),
-		'add_new_item'       => __( 'Add New Serie', 'vine_media' ),
-		'new_item'           => __( 'New Serie', 'vine_media' ),
-		'edit_item'          => __( 'Edit Serie', 'vine_media' ),
-		'view_item'          => __( 'View Serie', 'vine_media' ),
+		'name_admin_bar'     => _x( 'Series', 'add new on admin bar', 'vine_media' ),
+		'add_new'            => _x( 'Add New', 'series', 'vine_media' ),
+		'add_new_item'       => __( 'Add New Series', 'vine_media' ),
+		'new_item'           => __( 'New Series', 'vine_media' ),
+		'edit_item'          => __( 'Edit Series', 'vine_media' ),
+		'view_item'          => __( 'View Series', 'vine_media' ),
 		'all_items'          => __( 'All Series', 'vine_media' ),
 		'search_items'       => __( 'Search Series', 'vine_media' ),
 		'parent_item_colon'  => __( 'Parent Series:', 'vine_media' ),
@@ -31,18 +31,18 @@ function serie_init() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'serie' ),
+		'rewrite'            => array( 'slug' => 'series' ),
 		'capability_type'    => 'serie',
 		'has_archive'        => true,
         'show_in_rest'       => true,
-        'rest_base'          => 'serie',
+        'rest_base'          => 'series',
         'menu_icon'          => 'dashicons-video-alt',
 		'menu_position'      => null,
 		'supports'           => array( 'title', 'thumbnail' ),
         'map_meta_cap'       => true
 	);
 
-	register_post_type( 'serie', $args );
+	register_post_type( 'series', $args );
 }
 
 function series_rewrite() {
